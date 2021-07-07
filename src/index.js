@@ -1,8 +1,9 @@
 module.exports = function reverse (n) {
-  let array = n.toString().split("");
-  let ArrReversed = array.reverse().join("");
-  if (n < 0){
-      return ArrReversed * (-1);
+  let ReversedNum = (n + "").split("");;
+  if (ReversedNum[0] === '-'){
+    return ReversedNum.slice(1).reverse().join("") * 1;
   }
-  return ArrReversed
+  else{
+    return n.toString().split("").reverse().join("");
+  }
 }
